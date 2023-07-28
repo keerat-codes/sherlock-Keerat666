@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const charactersRoute = require('./routes/characters');
+const sherlockFacts  = require('./controllers/sherlockFacts');
+app.use('/facts', sherlockFacts);
 app.use('/characters', charactersRoute);
 app.use(cors())
 app.use(express.json());
